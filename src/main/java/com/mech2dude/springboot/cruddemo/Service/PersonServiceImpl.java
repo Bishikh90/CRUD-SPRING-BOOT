@@ -35,7 +35,6 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void updatePersonCovidInfo(int id) {
         personRepository.setCovidInfo("Negative",id);
-
     }
 
     @Override

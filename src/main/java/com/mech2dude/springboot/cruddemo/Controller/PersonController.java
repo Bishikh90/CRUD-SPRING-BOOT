@@ -27,6 +27,7 @@ public class PersonController {
     public ModelAndView getRegisterPage(){
         return new ModelAndView("addUser", "person", new Person());
     }
+
     @RequestMapping(value="/register", method= RequestMethod.POST)
     public String handleRegisterForm(@Valid @ModelAttribute("person") Person person, BindingResult bindingResult) throws SQLException {
         if(bindingResult.hasErrors()){
